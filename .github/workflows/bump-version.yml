@@ -40,7 +40,7 @@ jobs:
           TAG="v$VERSION"
 
           sed -i "s/\\\\version{[0-9]*}{[0-9]*}{[0-9]*}/\\\\version{$MAJOR}{$MINOR}{$PATCH}/" PurePy-spec.tex
-          sed -i "s|## \[v[0-9]*\.[0-9]*\.[0-9]*\](https://pure-py.github.io/pure-py-spec/v[0-9]*\.[0-9]*\.[0-9]*/PurePy-spec.pdf)|## [$TAG](https://pure-py.github.io/pure-py-spec/$TAG/PurePy-spec.pdf)|" README.md
+          sed -i "s|## \[v[0-9]*\.[0-9]*\.[0-9]*\](https://purepy-org.github.io/purepy-spec/v[0-9]*\.[0-9]*\.[0-9]*/PurePy-spec.pdf)|## [$TAG](https://purepy-org.github.io/purepy-spec/$TAG/PurePy-spec.pdf)|" README.md
 
           uv version "$VERSION"
 
@@ -114,7 +114,7 @@ jobs:
         uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ steps.version.outputs.tag }}
-          body: "Specification: https://pure-py.github.io/pure-py-spec/${{ steps.version.outputs.tag }}/PurePy-spec.pdf"
+          body: "Specification: https://purepy-org.github.io/purepy-spec/${{ steps.version.outputs.tag }}/PurePy-spec.pdf"
           files: |
             dist/*.whl
             PurePy-spec-sources.zip

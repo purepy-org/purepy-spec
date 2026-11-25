@@ -39,11 +39,11 @@ $(MYPY_VERSION_TEX): uv.lock
 
 # pin: release tag
 MECHANISATION_RELEASE := v$(shell cat .mechanisation-version)
-PUREPY_WHEEL := https://github.com/pure-py/isabelle-purepy/releases/download/$(MECHANISATION_RELEASE)/purepy-$(shell cat .mechanisation-version)-py3-none-any.whl
+PUREPY_WHEEL := https://github.com/purepy-org/isabelle-purepy/releases/download/$(MECHANISATION_RELEASE)/purepy-$(shell cat .mechanisation-version)-py3-none-any.whl
 
 $(MECHANISATION_NAMES_INDEX): .mechanisation-version
 	@mkdir -p $(@D)
-	curl -fsSL -o $@.tmp https://github.com/pure-py/isabelle-purepy/releases/download/$(MECHANISATION_RELEASE)/names.txt || \
+	curl -fsSL -o $@.tmp https://github.com/purepy-org/isabelle-purepy/releases/download/$(MECHANISATION_RELEASE)/names.txt || \
 		{ echo "report: no mechanisation release $(MECHANISATION_RELEASE)"; exit 1; }
 	mv $@.tmp $@
 
@@ -116,7 +116,7 @@ clean:
 	rm -rf generated $(FIGURE_NUMBERS)
 
 # pin: release tag
-ORG_WORKFLOW := git+https://github.com/pure-py/org-workflow@v0.1.0
+ORG_WORKFLOW := git+https://github.com/purepy-org/org-workflow@v0.1.0
 
 ## Check that every make target is documented and every workflow is named after its target
 check-targets:

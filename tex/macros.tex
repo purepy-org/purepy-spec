@@ -80,7 +80,7 @@
 % the paper each is marked by the external-link icon \specmark after the number and links to the released PDF, served by GitHub Pages, at the
 % destination named after the label (hyperref's destlabel option); the numbers come from the specification's labels,
 % read by xr-hyper under the prefix S-. The anonymised paper does not link, since the release URL names the project.
-\newcommand*{\specurl}{https://pure-py.github.io/pure-py-spec/v\versionstring/PurePy-spec.pdf}
+\newcommand*{\specurl}{https://purepy-org.github.io/purepy-spec/v\versionstring/PurePy-spec.pdf}
 \ifdefined\anonmode
   \newcommand*{\speclink}[2]{#2}
   \newcommand*{\specdoclink}[1]{#1}
@@ -111,7 +111,7 @@
 \ifdefined\anonmode
   \newcommand*{\issue}[1]{\##1}
 \else
-  \newcommand*{\issue}[1]{\href{https://github.com/pure-py/pure-py-spec/issues/#1}{\##1}}
+  \newcommand*{\issue}[1]{\href{https://github.com/purepy-org/purepy-spec/issues/#1}{\##1}}
 \fi
 \newcommand*{\figref}[1]{Figure~\ref{fig:#1}}
 \newcommand*{\figrefTwo}[2]{Figures~\ref{fig:#1} and \ref{fig:#2}}
